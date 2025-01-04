@@ -31,7 +31,13 @@ module hackathon_top
         blue  = 0;
 
         if (x > 100 & x < 300 & y > 50 & y < 100)
-            red = 31;
+            if (key[0]) begin //color blanco
+                red   = 31; 
+                green = 63; 
+                blue  = 31; 
+            end else begin
+                red = 31; 
+        end
 
         // 31 is the maximum 5-bit number, 5'b11111
 
@@ -39,7 +45,13 @@ module hackathon_top
         // that overlaps red rectangle
 
         if (x > 150 & x < 350 & y > 70 & y < 120)
-            green = 63;
+            if (key[1]) begin //color morado
+                red   = 31; 
+                green = 31; 
+                blue  = 31; 
+            end else begin
+                green = 63;
+        end
 
         // 63 is the maximum 6-bit number, 6'b111111
 
@@ -47,7 +59,13 @@ module hackathon_top
         // that overlaps both rectangles
 
         if (x > 200 & x < 400 & y > 90 & y < 140)
-            blue = 31;
+            if (key[2]) begin //color azul claro
+                red   = 0; 
+                green = 61; 
+                blue  = 31; 
+            end else begin
+                blue = 31;
+        end
     end
 
 endmodule
