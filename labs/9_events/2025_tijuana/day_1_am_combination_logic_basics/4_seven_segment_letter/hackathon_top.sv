@@ -32,13 +32,12 @@ module hackathon_top
     //  e     c     1     0
     //  |     |     |      
     //   --d--  h      0    0
-
-    typedef enum bit [7:0]
+typedef enum bit [7:0]
     {
         //         abcd efgh
-        F     = 8'b1000_1110,  // This means "8-bit binary number"
+        R     = 8'b1100_1100,  // This means "8-bit binary number"
         P     = 8'b1100_1110,
-        G     = 8'b1011_1100,
+        E     = 8'b1001_1110,
         A     = 8'b1110_1110,
         J     = 8'b1111_1000,
         O     = 8'b1111_1100,
@@ -57,10 +56,23 @@ module hackathon_top
 
     //assign abcdefgh = key [0] ? R : J;
     //assign digit    = key [1] ? 2'b10 : 2'b01;
+    // assign abcdefgh = ...
+    // assign digit    = ...
+    
+    /*
+    assign abcdefgh = key[3] ? P : (key[2] ? E : (key[1] ? R : (key[0] ? A : space)));
+    assign digit = (key[3]) ? 4'b1000 :   // se enciende 5
+               (key[2]) ? 4'b0100 :   // se enciende 6
+               (key[1]) ? 4'b0010 :   // se enciende 7
+               (key[0]) ? 4'b0001 :   // se enciende 8
+               4'b0000;               //apagar
+    */
+
 
     // Exercise 2: Display letters of a 4-character word
     // using this code to display letter of FPGA as an example
 
+    
     
     seven_seg_encoding_e letter;
 
