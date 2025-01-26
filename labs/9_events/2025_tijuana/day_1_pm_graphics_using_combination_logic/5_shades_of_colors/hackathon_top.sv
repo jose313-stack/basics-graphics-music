@@ -30,31 +30,18 @@ module hackathon_top
         green = 0;
         blue  = 0;
 
-<<<<<<< HEAD
         if (x > 100 & x < 300 & y > 50 & y < 100)
             if (key[0]) begin //color sombra de rojo
                 red  = 15; 
             end else begin
                 red = 31; 
         end
-=======
-        if (x > 0 & x < 155 & y > 0 & y < 300)
-            if(key[0]) 
-                begin
-                    red=16;
-                end
-            else 
-                begin        
-                    red = 31;
-                end
->>>>>>> upstream/main
 
         // 31 is the maximum 5-bit number, 5'b11111
 
         // Exercise 1: Uncomment the code for a green rectangle
         // that overlaps red rectangle
 
-<<<<<<< HEAD
         if (x > 150 & x < 350 & y > 70 & y < 120)
             if (key[1]) begin //color sombra de verde
                 green = 31; 
@@ -62,40 +49,17 @@ module hackathon_top
                 green = 63;
         end
 
-=======
-        if (x > 155 & x < 310 & y > 0 & y < 300)
-            if(key[1]) 
-                begin
-                    green=32;
-                end
-            else 
-                begin        
-                    green = 63;
-                end
->>>>>>> upstream/main
         // 63 is the maximum 6-bit number, 6'b111111
 
         // Exercise 2: Add a blue rectangle
         // that overlaps both rectangles
 
-<<<<<<< HEAD
         if (x > 200 & x < 400 & y > 90 & y < 140)
             if (key[2]) begin //color sombra de azul
                 blue  = 15; 
             end else begin
                 blue = 31;
         end
-=======
-        if (x > 310 & x < 465 & y > 0 & y < 300)
-          if(key[2]) 
-                begin
-                    blue =16;
-                end
-            else 
-                begin        
-                    blue = 31;
-                end
->>>>>>> upstream/main
     end
 
 endmodule
